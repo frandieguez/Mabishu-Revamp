@@ -44,11 +44,10 @@ style "default" {
 	GtkMenuBar::internal-padding 			= 0
 
 	GtkExpander::expander-size 			    = 11
-	GtkExpander::expander_spacing			= 16
+	GtkExpander::expander_spacing			= 0
 	GtkToolbar::internal-padding 			= 1
 	GtkToolbar::shadow-type 			    = GTK_SHADOW_NONE
 	GtkStatusbar::shadow_type    		    = GTK_SHADOW_NONE
-	GtkTreeView::expander-size 			    = 7
 	GtkTreeView::vertical-separator 		= 0
 	GtkNotebook::tab-overlap 			    = -1
 	GtkProgressBar::min-horizontal-bar-height = 14
@@ -799,103 +798,6 @@ style "gradient-menubar"
        
 }
 
-style "expander"
-{
-
-	engine "pixmap"
-	{
-
-	    image
-         	{function		= EXPANDER
-	        state			= NORMAL
-	        expander_style		= COLLAPSED
-	        file			= "Treeview/expander-collapsed.png"}
-
-	    image
-         	{function		= EXPANDER
-	        state			= PRELIGHT
-	        expander_style		= COLLAPSED
-	        file			= "Treeview/expander-collapsed-prelight.png"}
-
-	    image
-         	{function		= EXPANDER
-	        state			= ACTIVE
-	        expander_style		= COLLAPSED
-	        file			= "Treeview/expander-collapsed.png"}
-
-	    image
-         	{function		= EXPANDER
-	        state			= INSENSITIVE
-	        expander_style		= COLLAPSED
-	        file			= "Treeview/expander-insensitive.png"}
-
-		#semi collapsed
-      	image
-         	{function		= EXPANDER
-	        state			= NORMAL
-	        expander_style		= SEMI_COLLAPSED
-	        file			= "Treeview/expander-semi-collapsed.png"}
-
-        image
-         	{function		= EXPANDER
-	        state			= PRELIGHT
-	        expander_style		= SEMI_COLLAPSED
-	        file			= "Treeview/expander-semi-collapsed-prelight.png"}
-
-        image
-         	{function		= EXPANDER
-	        state			= ACTIVE
-	        expander_style		= SEMI_COLLAPSED
-	        file			= "Treeview/expander-semi-collapsed.png"}
-
-		#semi expanded
-      	image
-         	{function		= EXPANDER
-	        state			= NORMAL
-	        expander_style		= SEMI_EXPANDED
-	        file			= "Treeview/expander-semi-expanded.png"}
-
-        image
-         	{function		= EXPANDER
-	        state			= PRELIGHT
-	        expander_style		= SEMI_EXPANDED
-	        file			= "Treeview/expander-semi-expanded-prelight.png"}
-
-        image
-         	{function		= EXPANDER
-	        state			= ACTIVE
-	        expander_style		= SEMI_EXPANDED
-	        file			= "Treeview/expander-semi-expanded.png"}
-
-
-		#expanded
-      	image
-         	{function		= EXPANDER
-	        state			= NORMAL
-	        expander_style		= EXPANDED
-	        file			= "Treeview/expander-expanded.png"}
-
-	        image
-         	{function		= EXPANDER
-	        state			= PRELIGHT
-	        expander_style		= EXPANDED
-	        file			= "Treeview/expander-expanded-prelight.png"}
-
-	        image
-         	{function		= EXPANDER
-	        state			= ACTIVE
-	        expander_style		= EXPANDED
-	        file			= "Treeview/expander-expanded.png"}
-
-	        image
-         	{function		= EXPANDER
-	        state			= INSENSITIVE
-	        expander_style		= EXPANDED
-	        file			= "Treeview/expander-expandend-insensitive.png"}
-	
-	}
-
-}
 
 style "icon-view"
 {
@@ -1013,10 +915,6 @@ widget "*tmw-menubar"				style "gradient-menubar"
 
 #Workaround for terminal notebook
 widget_class "*TerminalWindow*GtkNotebook"	style "notebook"
-
-class "GtkExpander" 	style "expander"
-class "GtkTreeView" 	style "expander"
-class "GtkCTree" 	style "expander"
 
 # Workarounds for Evolution
 widget_class "*.ETable.ECanvas"    		style "treeview-header"
