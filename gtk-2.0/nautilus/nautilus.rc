@@ -1,0 +1,328 @@
+style "nautilus-window"
+{
+		bg[NORMAL] = @base_color
+}
+
+
+style "nautilus-splitter"
+{
+	xthickness = 0
+	ythickness = 0
+
+	GtkPaned::handle-size         = 1
+
+	bg[NORMAL] = @base_color
+	
+	engine "pixmap"
+	{
+		image 
+		{function	= HANDLE
+		 recolorable	= TRUE
+		 file		= "nautilus/handle-n.png"
+		 stretch	= TRUE}
+	}
+}
+
+
+style "nautilus-icon-view"
+{
+	xthickness = 0
+	ythickness = 0
+}
+
+style "nautilus-toolbar" 
+{
+	GtkToolbar::internal-padding = 2
+
+	engine "pixmap" 
+	{
+
+	image
+	{function = BOX
+	recolorable = TRUE
+	stretch = TRUE
+	file = "nautilus/toolbarbg.png"
+	border = { 0, 0, 0, 2 }}
+	
+	}
+
+}
+style "nautilus-list-view"
+{
+	xthickness = 0
+	ythickness = 0
+}
+
+style "nautilus-location"
+{
+
+	xthickness		= 0
+	ythickness		= 0
+
+	bg[NORMAL] = @base_color
+
+	engine "pixmap"
+	{
+
+		image 
+		{function	= FLAT_BOX
+		recolorable	= TRUE
+		file		= "nautilus/Location/bg.png"
+		state		= NORMAL
+		stretch		= TRUE
+		border 		= { 0, 0, 0, 1 }}
+	}
+}
+
+style "nautilus-sidebar"
+{
+	GtkTreeView::horizontal-separator = 4
+
+	xthickness = 0
+	ythickness = 0
+
+	bg[NORMAL] = "#EEEEEE"
+	base[NORMAL] = "#EEEEEE"
+
+	engine "pixmap"									
+	{
+
+	image
+	{function		= FLAT_BOX
+	recolorable		= TRUE
+	state			= NORMAL
+	file			= "nautilus/side-bg.png"
+	border			= { 0, 0, 0, 0}
+	stretch			= TRUE}
+
+	image
+	{function		= FLAT_BOX
+	recolorable		= TRUE
+	state			= SELECTED
+	file			= "nautilus/row-selected.png"
+	border			= { 0, 0, 0, 0}
+	stretch			= TRUE}
+	
+        image
+        {
+                function = SHADOW
+                file = "Treeview/focus-dnd.png"
+                border = {10, 10, 10, 10}
+                detail = "scrolled_window"
+          }
+    
+
+
+	}
+}
+
+style "nautilus-statusbar"
+{
+	#GtkStatusbar::shadow-type = GTK_SHADOW_OUT
+	
+	ythickness = 4
+	xthickness = 4	
+	
+	bg[NORMAL] = @base_color
+	base[NORMAL] = @base_color
+
+	fg[NORMAL] = shade (2.0, @fg_color)
+
+	
+
+}
+
+style "nautilus-notebook" 
+{
+
+	xthickness		= 1
+	ythickness		= 0
+
+	engine "pixmap" 
+    	{
+
+	image 
+	{function		= EXTENSION
+	recolorable		= TRUE
+	state			= ACTIVE
+	file			= "nautilus/notebook/active-top.png"
+	border			= { 2,2,24,24}
+	stretch			= TRUE}
+
+	image 
+	{function		= EXTENSION
+	recolorable		= TRUE
+	state			= NORMAL
+	file			= "nautilus/notebook/normal-top.png"
+	border			= { 2,2,2,2}
+	stretch			= TRUE}
+
+ 	image 
+	{function		= BOX_GAP
+	recolorable		= TRUE
+	file			= "nautilus/notebook/bg.png" 
+	border			= { 1, 1, 5,0}
+	stretch			= TRUE}
+   
+  	}
+}
+
+style "nautilus-scrollbar"
+{
+	engine "pixmap"
+	{
+
+        image 
+        {function        = BOX
+        recolorable     = TRUE
+        detail          = "trough"
+        file            = "nautilus/nautilus-v-trough.png"
+        border          = { 0, 1, 0, 0 }
+        stretch         = TRUE
+        orientation     = VERTICAL}
+
+	image 
+        {function        = BOX
+        recolorable     = TRUE
+        detail          = "trough"
+        file            = "nautilus/nautilus-h-trough.png"
+        border          = { 0, 0, 0, 1 }
+        stretch         = TRUE
+        orientation     = HORIZONTAL}
+
+	}
+}
+
+style "nautilus-breadcrum"
+{
+  xthickness = 5 # Spacing between arrow pathbar buttons
+  ythickness = 0
+
+  GtkButton::child-displacement-y = 0
+  GtkButton::child-displacement-x = 0
+  GtkButton::inner-border = {0, 13, 0, 0} # Spacing between arrow pathbar buttons
+
+  engine "pixmap"
+  {
+		image
+		{
+		function = BOX
+		shadow	=	OUT
+		state		= NORMAL
+		file		= "nautilus-pathbar/pathbar-arrow-right.svg"
+		border		= { 0, 13, 0, 0 }
+		stretch		= TRUE
+	}
+
+	image
+	{
+		function	= BOX
+		state		= ACTIVE
+		file		= "nautilus-pathbar/pathbar-arrow-right.svg"
+		border		= { 0, 13, 0, 0 }
+		stretch		= TRUE
+	}
+
+	image
+	{
+		function	= BOX
+		state		= PRELIGHT
+		file		= "nautilus-pathbar/pathbar-arrow-right.svg"
+		border		= { 0, 13, 0, 0 }
+		stretch		= TRUE
+	}
+
+	image
+	{
+		function	= BOX
+		state		= SELECTED
+		file		= "nautilus-pathbar/pathbar-arrow-right.svg"
+		border		= { 0, 13, 0, 0 }
+		stretch		= TRUE
+    }
+
+    #grey square fix#
+    image
+    {
+		function = BOX
+		state = INSENSITIVE
+		file = "nautilus-pathbar/null.png"
+		border = { 0, 13, 0, 0 }
+		stretch = TRUE
+    }
+  }
+}
+
+style "nautilus-left-slider"
+{
+	xthickness = 0
+	ythickness = 0
+	
+	engine "pixmap"
+	{
+	
+	image 
+	{function 		= BOX
+	file			= "nautilus/left_slider_normal.png"
+	border			= { 3, 3, 3, 3 }
+	stretch			= TRUE}
+
+	}
+
+}
+
+style "nautilus-right-slider"
+{	
+	xthickness = 0
+	ythickness = 0
+	
+	engine "pixmap"
+	{
+		image {
+			function 		= BOX
+			file			= "nautilus/right_slider_normal.png"
+			border			= { 3, 3, 3, 3 }
+			stretch			= TRUE
+		}
+	}
+}
+
+style "nautilus-split-view"
+{
+	GtkPaned::handle-size	= 8
+
+	engine "pixmap"
+	{
+		image
+		{function	= HANDLE
+		recolorable	= TRUE
+		file		= "nautilus/splithandle.png"
+		stretch		= TRUE
+		border 		= { 1, 1, 0, 0 }
+		orientation	= VERTICAL}
+	}
+}
+
+#Pathbar/Location Bar Arrows
+#widget "*Gtk*PathBar*Button" 					style "nautilus-breadcrum"
+#widget "*Gtk*PathBar*Button*Label*" 				style "nautilus-breadcrum-text"
+#widget "*Gtk*PathBar*Button*Arrow" 				style "nautilus-breadcrum" # 1st arrow
+#widget_class "*NautilusPathBar.*ToggleButton" 			style "nautilus-breadcrum" 
+#widget "*NautilusPathBar.*ToggleButton" 			style "nautilus-breadcrum" 
+#widget "*Gtk*PathBar*Button" 					style "nautilus-breadcrum"
+
+widget_class "*NautilusNavigationWindow"			style "nautilus-window"
+widget_class "*NautilusHorizontalSplitter"			style "nautilus-splitter"
+widget_class "*NautilusHorizontalSplitter*GtkHPaned"		style "nautilus-split-view"
+widget_class "*FMIconView"					style "nautilus-icon-view"
+widget_class "*FMListView"					style "nautilus-list-view"
+widget_class "*NautilusSidePane*"				style "nautilus-sidebar"
+#widget_class "*NautilusHorizontalSplitter*GtkStatusbar"	style "nautilus-statusbar"
+widget_class "*NautilusNotebook"				style "nautilus-notebook"
+widget_class "*Nautilus*Scrollbar*"				style "nautilus-scrollbar"
+widget_class "NautilusNavigationWindow*GtkToolbar"		style "nautilus-toolbar"
+widget "Nautilus*left_slider*" 					style "nautilus-left-slider" 
+widget "Nautilus*right_slider*" 				style "nautilus-right-slider"
+widget "*statusbar-noborder*"					style "nautilus-statusbar" 
+widget "*.nautilus-extra-view-widget" 				style "nautilus-location"
+

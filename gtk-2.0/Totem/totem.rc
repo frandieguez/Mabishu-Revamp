@@ -1,0 +1,12 @@
+style "totem-main"
+{
+	stock["gtk-media-pause"] = {{ "Icons/totem/media-playback-pause.svg", *, *, * }}
+	stock["gtk-media-play"] = {{ "Icons/totem/media-playback-start.svg", *, *, * }}
+	stock["gtk-media-next"] = {{ "Icons/totem/media-skip-forward.svg", *, *, * }}
+	stock["gtk-media-previous"] = {{ "Icons/totem/media-skip-backward.svg", *, *, * }}
+
+	stock["gtk-close"] = {{ "Icons/totem/close.png", *, *, * }}
+
+}
+
+widget	"GtkWindow.GtkVBox.GtkHPaned.GtkVBox.GtkVBox.GtkHBox.GtkToolButton.GtkButton.GtkImage"	style "totem-main"

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Mabishu Revamp
+Comment=Mabishu unofficial revamp by zentili
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Mabishu Revamp
+MetacityTheme=Mabishu Revamp
+IconTheme=elementary-monochrome
+CursorTheme=default
+ButtonLayout=close,minimize,maximize:
