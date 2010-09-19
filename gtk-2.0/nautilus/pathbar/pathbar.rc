@@ -15,7 +15,7 @@ style "nautilus-breadcrumbs"
 			recolorable     = TRUE
 			state			= PRELIGHT
 			file			= "nautilus/pathbar/nautilus-pathbar-prelight.png"
-			border			= { 0, 10, 0, 0 }
+			border			= { 0, 8, 0, 0 }
 			stretch         = TRUE
 		}		
 
@@ -26,7 +26,7 @@ style "nautilus-breadcrumbs"
 			shadow			= IN
 			state			= PRELIGHT
 			file			= "nautilus/pathbar/nautilus-pathbar-active.png"
-			border			= { 0, 10, 0, 0 }
+			border			= { 0, 8, 0, 0 }
 			stretch         	= TRUE
 		}
 	  
@@ -35,8 +35,8 @@ style "nautilus-breadcrumbs"
 			function        = BOX
 			recolorable     = TRUE
 			state			= NORMAL
-			file			= "nautilus/pathbar/nautilus-pathbar-normal.png"
-			border			= { 0, 10, 0, 0 }
+			file			= "nautilus/pathbar/pathbar-arrow-right.svg"
+			border			= { 0, 8, 0, 0 }
 			stretch         	= TRUE
 		}
 		
@@ -46,7 +46,7 @@ style "nautilus-breadcrumbs"
 			recolorable     = TRUE
 			state			= PRELIGHT
 			file			= "nautilus/pathbar/nautilus-pathbar-active.png"
-			border			= { 0, 10, 0, 0 }
+			border			= { 0, 8, 0, 0 }
 			stretch         	= TRUE
 		}
 	
@@ -57,7 +57,7 @@ style "nautilus-breadcrumbs"
 			recolorable     = TRUE
 			state			= ACTIVE
 			file			= "nautilus/pathbar/nautilus-pathbar-active.png"
-			border			= { 0, 10, 0, 0 }
+			border			= { 0, 8, 0, 0 }
 			stretch         = TRUE
 		}  
 
@@ -67,7 +67,7 @@ style "nautilus-breadcrumbs"
 			recolorable     = TRUE
 			state			= INSENSITIVE
 			file			= "nautilus/pathbar/nautilus-pathbar-normal.png"
-			border			= { 0, 10, 0, 0 }
+			border			= { 0, 8, 0, 0 }
 			stretch         = TRUE
 		} 
 
@@ -77,7 +77,7 @@ style "nautilus-breadcrumbs"
 			recolorable     = TRUE
 			state			= SELECTED
 			file			= "nautilus/pathbar/nautilus-pathbar-active.png"
-			border			= { 0, 10, 0, 0 }
+			border			= { 0, 8, 0, 0 }
 			stretch         = TRUE
 		}
 	}
@@ -88,14 +88,17 @@ style "nautilus-left-slider"
 	xthickness = 0
 	ythickness = 0
 	
-	engine "pixmap"	{
-		image 		{
-			function 		= BOX
-			file			= "nautilus/pathbar/null.png"
-			border			= { 0, 0, 0, 0 }
-			stretch			= TRUE
-		}
+	engine "pixmap"
+	{
+	
+	image 
+	{function 		= BOX
+	file			= "Null/null.png"
+	border			= { 3, 3, 3, 3 }
+	stretch			= TRUE}
+
 	}
+
 }
 
 style "nautilus-right-slider"
@@ -107,12 +110,13 @@ style "nautilus-right-slider"
 	{
 		image {
 			function 		= BOX
-			file			= "nautilus/pathbar/null.png"
-			border			= { 0, 0, 0, 0 }
+			file			= "Null/null.png"
+			border			= { 3, 3, 3, 3 }
 			stretch			= TRUE
 		}
 	}
 }
+
 
 widget_class "*NautilusPathBar.*ToggleButton" 	style "nautilus-breadcrumbs"
 widget "Nautilus*left_slider*" 					style "nautilus-left-slider" 

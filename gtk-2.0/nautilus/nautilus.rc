@@ -1,6 +1,12 @@
 style "nautilus-window"
 {
-		bg[NORMAL] = @base_color
+	bg[NORMAL] = @base_color
+	
+	engine "murrine" {		
+	    menubaritemstyle 	= 1 # 0 = menuitem look, 1 = button look
+	    menubarstyle 		= 1 # 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
+	    menustyle 		    = 3 # 0 = no vertical menu stripe, 1 = display vertical menu stripe
+    }  
 }
 
 
@@ -120,10 +126,10 @@ style "nautilus-statusbar"
 {
 	#GtkStatusbar::shadow-type = GTK_SHADOW_OUT
 	
-	ythickness = 4
+	ythickness = 3
 	xthickness = 4	
 	
-	bg[NORMAL] = @base_color
+	bg[NORMAL]   = @base_color
 	base[NORMAL] = @base_color
 
 	fg[NORMAL] = shade (2.0, @fg_color)
@@ -253,40 +259,6 @@ style "nautilus-breadcrum"
   }
 }
 
-style "nautilus-left-slider"
-{
-	xthickness = 0
-	ythickness = 0
-	
-	engine "pixmap"
-	{
-	
-	image 
-	{function 		= BOX
-	file			= "nautilus/left_slider_normal.png"
-	border			= { 3, 3, 3, 3 }
-	stretch			= TRUE}
-
-	}
-
-}
-
-style "nautilus-right-slider"
-{	
-	xthickness = 0
-	ythickness = 0
-	
-	engine "pixmap"
-	{
-		image {
-			function 		= BOX
-			file			= "nautilus/right_slider_normal.png"
-			border			= { 3, 3, 3, 3 }
-			stretch			= TRUE
-		}
-	}
-}
-
 style "nautilus-split-view"
 {
 	GtkPaned::handle-size	= 8
@@ -321,8 +293,6 @@ widget_class "*NautilusSidePane*"				style "nautilus-sidebar"
 widget_class "*NautilusNotebook"				style "nautilus-notebook"
 widget_class "*Nautilus*Scrollbar*"				style "nautilus-scrollbar"
 widget_class "NautilusNavigationWindow*GtkToolbar"		style "nautilus-toolbar"
-widget "Nautilus*left_slider*" 					style "nautilus-left-slider" 
-widget "Nautilus*right_slider*" 				style "nautilus-right-slider"
 widget "*statusbar-noborder*"					style "nautilus-statusbar" 
 widget "*.nautilus-extra-view-widget" 				style "nautilus-location"
 

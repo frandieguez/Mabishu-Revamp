@@ -1,6 +1,5 @@
 gtk-icon-sizes = "panel-menu=20,20:gtk-button=16,16"
 
-
 style "panel-buttons"
 {
 	GtkButton	::child-displacement-x	= 0
