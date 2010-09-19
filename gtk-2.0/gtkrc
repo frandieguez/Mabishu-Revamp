@@ -15,7 +15,7 @@ style "default"
 	GtkButton::child-displacement-y 	  	= 1
 	GtkButton::default-border       	  	= { 0, 0, 0, 0 }
 
-	GtkPaned::handle-size          		  	= 6
+	GtkPaned::handle-size          		= 6
 
 	GtkScale::slider-length       		  	= 14
 	GtkScale::slider-width       		  	= 15
@@ -79,8 +79,7 @@ style "default"
 	text[SELECTED]    = @selected_fg_color
 	text[INSENSITIVE] = shade (5.0, @menu_fg_color)
 
-	engine "murrine" 
-	{
+	engine "murrine" {
 		animation           = TRUE
 		colorize_scrollbar  = TRUE
 		contrast            = 0.8
@@ -110,36 +109,30 @@ style "default"
 		spinbuttonstyle     = 0
 		comboboxstyle	    = 0
 		arrowstyle 	    = 1
-		
-
 	}
 }
 
-style "wid" 
-{
+style "wid" {
 	xthickness = 1
 	ythickness = 1
 
 }
 
-style "wide" 
-{
+style "wide" {
 	xthickness = 2
 	ythickness = 2
 
 	bg[SELECTED]	= @selected_bg_color
 }
 
-style "wider"
-{
+style "wider" {
 	xthickness = 3
 	ythickness = 3
 
 	bg[SELECTED]	= @selected_bg_color
 }
 
-style "button" = "wider"
-{
+style "button" = "wider" {
 
 	bg[NORMAL]      = shade (1.13, @bg_color)
 	bg[PRELIGHT]    = mix (0.96, @bg_color, @focus_color)
@@ -156,8 +149,10 @@ style "button" = "wider"
 		border_shades 	    = {1.03,0.8}
 		shadow_shades	    = {0.5,0.0}
 		reliefstyle 	    = 3
+		textstyle = 1
 	}
 }
+
 
 style "entry" = "wider"
 {
@@ -189,219 +184,23 @@ style "entry" = "wider"
 #	}
 #}
 
-style "notebook"
-{
-
-GtkNotebook::tab-overlap = 6
-
-	xthickness = 4
-	ythickness = 4
-
-	bg[ACTIVE]   = shade (0.89, @bg_color)
-	bg[NORMAL]   = @bg_color
-	bg[SELECTED] = @selected_bg_color
-	fg[ACTIVE]   = shade (2.8, @fg_color)
-
-	engine "pixmap"
-	{
-
-	#BOXES
-		
-		image 
-
-      		{function	= BOX_GAP
-		recolorable	= TRUE
-		file		= "Notebook/bg.png" 
-		border		= { 3, 4, 4, 0}
-		state		= NORMAL
-		stretch		= TRUE
-		gap_side	= TOP
-		gap_file	= "Notebook/gap.png"
-		gap_border	= { 3 ,3 ,0 ,0}
-		gap_start_file	= "Notebook/gap-start.png"
-		gap_start_border= { 0 ,0 ,0 ,0}
-		gap_end_file		= "Notebook/null.png"
-		detail		= "notebook"}
+style "notebook_bg" {
+	bg[NORMAL] = shade (1.02, @bg_color)
+	bg[ACTIVE] = shade (0.97, @bg_color)
+	fg[ACTIVE] = mix (0.9, @fg_color, @bg_color)
+}
 
 
-		image 
-
-      		{function	= BOX_GAP
-		recolorable	= TRUE
-		file		= "Notebook/bg-bottom.png" 
-		border		= { 3, 3, 0, 5}
-		stretch		= TRUE
-		gap_side	= BOTTOM
-		gap_file	= "Notebook/gap.png"
-		gap_border	= { 3 ,3 ,0 ,0}
-		gap_start_file	= "Notebook/gap-b-start.png"
-		gap_start_border= { 3 ,0 ,0 ,0}
-		gap_end_file		= "Notebook/null.png"
-		detail		= "notebook"}
-
-		image 
-
-      		{function	= BOX_GAP
-		recolorable	= TRUE
-		file		= "Notebook/bg-left.png" 
-		border		= { 5, 0, 3, 3}
-		stretch		= TRUE
-		gap_side	= LEFT
-		gap_file	= "Notebook/gap-v.png"
-		gap_border	= { 0 ,0 ,3 ,3}
-		gap_start_file	= "Notebook/gap-l-start.png"
-		gap_start_border= { 0 ,0 ,3 ,0}
-		gap_end_file		= "Notebook/null.png"
-		detail		= "notebook"}	
-
-		image 
-
-      		{function	= BOX_GAP
-		recolorable	= TRUE
-		file		= "Notebook/bg-right.png" 
-		border		= { 0, 5, 3, 3}
-		stretch		= TRUE
-		gap_side	= RIGHT
-		gap_file	= "Notebook/gap-v.png"
-		gap_border	= { 0 ,0 ,3 ,3}
-		gap_start_file	= "Notebook/gap-r-start.png"
-		gap_start_border= { 0 ,0 ,3 ,0}
-		gap_end_file		= "Notebook/null.png"
-		detail		= "notebook"}
-
-		image 
-
-      		{function	= BOX
-		recolorable	= TRUE
-		file		= "Notebook/bg.png" 
-		border		= { 3, 4, 5, 0}
-		stretch		= TRUE}
-
-	#TABS
-		#top tabs
-		image {
-			function	= EXTENSION
-			recolorable	= TRUE
-			file		= "Notebook/tab-v-normal.png" 
-			border		= { 4, 4, 5, 0}
-			state		= NORMAL
-			stretch		= TRUE
-			gap_side	= BOTTOM
-			gap_file	= "Notebook/null.png"
-			gap_border	= { 0 ,0 ,0 ,0}
-			gap_start_file	= "Notebook/null.png"
-			gap_start_border= { 0 ,0 ,0 ,0}
-			gap_end_file		= "Notebook/null.png"
-			detail		= "tab"
-		}
-
-
-		image {
-			function	= EXTENSION
-			recolorable	= TRUE
-			file		= "Notebook/tab-v-active.png" 
-			border		= { 4, 4, 5, 0}
-			state		= ACTIVE
-			stretch		= TRUE
-			gap_side	= BOTTOM
-
-			detail		= "tab"
-		}
-
-		#bottom tabs
-		image {
-		  	function	= EXTENSION
-			recolorable	= TRUE
-			file		= "Notebook/tab-b-normal.png" 
-			border		= { 4, 4, 0, 5}
-			state		= NORMAL
-			stretch		= TRUE
-			gap_side	= TOP
-			gap_file	= "Notebook/null.png"
-			gap_border	= { 0 ,0 ,0 ,0}
-			gap_start_file	= "Notebook/null.png"
-			gap_start_border= { 0 ,0 ,0 ,0}
-			gap_end_file		= "Notebook/null.png"
-			detail		= "tab"
-		}
-
-
-		image 
-
-      		{function	= EXTENSION
-		recolorable	= TRUE
-		file		= "Notebook/tab-b-active.png" 
-		border		= { 4, 4, 0, 5}
-		state		= ACTIVE
-		stretch		= TRUE
-		gap_side	= TOP
-		detail		= "tab"}
-
-		#left tabs
-		image 
-
-      		{function	= EXTENSION
-		recolorable	= TRUE
-		file		= "Notebook/tab-l-normal.png" 
-		border		= { 5, 0, 4, 4}
-		state		= NORMAL
-		stretch		= TRUE
-		gap_side	= RIGHT
-		gap_file	= "Notebook/null.png"
-		gap_border	= { 0 ,0 ,0 ,0}
-		gap_start_file	= "Notebook/null.png"
-		gap_start_border= { 0 ,0 ,0 ,0}
-		gap_end_file		= "Notebook/null.png"
-		detail		= "tab"}
-
-
-		image 
-
-      		{function	= EXTENSION
-		recolorable	= TRUE
-		file		= "Notebook/tab-l-active.png" 
-		border		= { 5, 0, 4, 4}
-		state		= ACTIVE
-		stretch		= TRUE
-		gap_side	= RIGHT
-		detail		= "tab"}
-
-		#right tabs
-		image 
-
-      		{function	= EXTENSION
-		recolorable	= TRUE
-		file		= "Notebook/tab-r-normal.png" 
-		border		= { 0, 5, 4, 4}
-		state		= NORMAL
-		stretch		= TRUE
-		gap_side	= LEFT
-		gap_file	= "Notebook/null.png"
-		gap_border	= { 0 ,0 ,0 ,0}
-		gap_start_file	= "Notebook/null.png"
-		gap_start_border= { 0 ,0 ,0 ,0}
-		gap_end_file		= "Notebook/null.png"
-		detail		= "tab"}
-
-
-		image 
-
-      		{function	= EXTENSION
-		recolorable	= TRUE
-		file		= "Notebook/tab-r-active.png" 
-		border		= { 0, 5, 4, 4}
-		state		= ACTIVE
-		stretch		= TRUE
-		gap_side	= LEFT
-		detail		= "tab"}
-
-		image
-		{function		= FOCUS
-		file			= "Null/null.png"}
-
+style "notebook" {
+	xthickness = 2
+	ythickness = 2
+	
+	engine "murrine" {
+		roundness = 3
+		contrast = 0.8
+		focusstyle = 2
+		lightborder_shade = 1.16
 	}
-
-
 }
 
 style "tasklist" = "wide"
@@ -504,26 +303,30 @@ style "tooltips" = "wider"
 	}
 }
 
-style "progressbar"
-{
+
+style "progressbar" {
 	xthickness = 0
 	ythickness = 0
 
-	fg[PRELIGHT] = lighter (@selected_fg_color)
-  	bg[NORMAL]   = shade (0.98, @bg_color)
-	bg[SELECTED] = @selected_bg_color
+	bg[ACTIVE] = shade (0.94, @bg_color)
+	#bg[SELECTED] = "#cdcdcd"
+	fg[PRELIGHT] = "#793C24"
 
-engine "murrine" {
-		roundness 	    = 2
-		gradient_shades     = {0.95,1.0,1.1,1.18}  
-		lightborder_shade   = 1.2
-		lightborderstyle    = 1
-		glow_shade          = 1.02
-		glowstyle 	    = 0
-		highlight_shade     = 1.02
-		trough_shades       = { 0.87, 0.9 }
+	engine "murrine" {
+		#trough_shades = {0.98, 1.02}
+		roundness = 8
+		lightborderstyle = 1
+		lightborder_shade = 1.26
+		border_shades = {0.95, 0.85}
+		gradient_shades = {1.1, 1.0, 1.0, 0.9}
+		trough_border_shades = {0.9, 1.4}
 	}
-	
+}
+
+style "progressbar_menu_item" = "progressbar" {
+	engine "murrine" {
+		roundness = 0
+	}
 }
 
 style "toolbar" 
@@ -1147,14 +950,14 @@ class "GtkHScrollbar"  				style "hscrollbar"
 class "GtkScrolledWindow"				style "wid"
 
 # General matching following, the order is choosen so that the right styles override each other
-widget_class "*<GtkNotebook>*<GtkEventBox>"     style "notebook"
-widget_class "*<GtkNotebook>*<GtkDrawingArea>"  style "notebook"
-widget_class "*<GtkNotebook>*<GtkLayout>"       style "notebook"
-widget_class "*<GtkNotebook>*<GtkLabel>"        style "notebook"
+widget_class "*<GtkNotebook>*<GtkEventBox>"     style "notebook_bg"
+widget_class "*<GtkNotebook>*<GtkDrawingArea>"  style "notebook_bg"
+widget_class "*<GtkNotebook>*<GtkLayout>"       style "notebook_bg"
+widget_class "*<GtkNotebook>*<GtkLabel>"        style "notebook_bg"
 
 widget_class "*<GtkButton>"      			style "button"
 
-widget_class "*<GtkNotebook>"    			style "notebook"
+widget_class "*<GtkNotebook>"    			style "notebook_bg"
 widget_class "*<GtkStatusbar>*"  			style "statusbar"
 
 widget_class "*<GtkComboBoxEntry>*"		style "comboboxentry"
