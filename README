@@ -1,11 +1,8 @@
-Mabishu Revamp - A highly simplified GTK+
-=========================================
-
+# Mabishu Revamp - A highly simplified GTK+
 This GTK+ is based in Clearlooks Revamps but with a lot
 of changes to more simplication.
 
-INSTALLATION
-============
+## INSTALLATION
 For a better visualization install elementary nautilus just 
 issuing the next commands:
 
