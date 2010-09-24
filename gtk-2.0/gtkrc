@@ -338,7 +338,7 @@ style "progressbar" {
 
 	bg[ACTIVE] = shade (0.94, @bg_color)
 	#bg[SELECTED] = "#cdcdcd"
-	fg[PRELIGHT] = "#793C24"
+	fg[PRELIGHT] = "#ffffff"
 
 	engine "murrine" {
 		#trough_shades = {0.98, 1.02}
