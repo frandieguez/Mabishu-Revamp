@@ -1,0 +1,162 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    color: gray;
+    font-family: tahoma;
+}
+strong{
+    font-family:Arial;
+}
+
+.clearfix:after 
+{
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix 
+{
+	display: inline-block;
+}
+
+html[xmlns] .clearfix 
+{
+	display: block;
+}
+
+* html .clearfix 
+{
+	height: 1%;
+}
+
+
+
+body{
+    background-color:#dddddd;
+    font-family:Arial;
+    font-size:13px;
+    text-align:center;
+}
+
+h1{
+    margin:0;
+}
+
+.container{
+    padding: 40px 0 70px 0;
+    margin:0 auto;
+    float:none;
+}
+
+
+#carousel-wrapper{
+    position:relative;
+}
+#carousel{
+    margin-bottom:100px;
+}
+
+#carousel img{
+    width:550px !important;
+    -moz-box-shadow: 0px 0px 10px #000;
+    -webkit-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+    margin:10px
+}
+
+#carousel li{
+    margin:0 auto;
+}
+
+#next-piece{
+    background:url(../images/slider-right.png) center center no-repeat;
+    width:40px;
+    height:40px;
+    position:absolute;
+    top:45%;
+    right:0;
+    z-index:9999;
+    cursor:pointer;
+}
+#previous-piece{
+    background:url(../images/slider-left.png) center center no-repeat;
+    width:40px;
+    height:40px;
+    position:absolute;
+    top:45%;
+    left:0;
+    z-index:9999;
+    cursor:pointer;
+}
+
+#information{
+    color:Black;
+    text-align:left;
+}
+
+#information h2{
+    margin:0 0 5px 0;
+}
+#download-section{
+    margin:0 auto;
+    float:none;
+    margin:20px 20px 10px;
+}
+
+#download-section li{
+    display:inline;
+    float:left;
+}
+a.download-button{
+    display:block;
+    min-height:31px;
+    height:41px;
+    width:181px;
+    text-indent: -9999px;
+}
+a.download-gtk-theme{
+    background:url(../images/download-gtk-theme.png) top left no-repeat;
+}
+
+a.download-gtk-theme:hover{
+    background-position:bottom left;
+}
+
+a.download-icon-theme{
+    background:url(../images/download-icon-theme.png) top left no-repeat;
+}
+
+a.download-icon-theme:hover{
+    background-position:bottom left;
+}
+
+div.download-source{
+    float:right;
+    font-size:.9em;
+    margin-top:20px;
+    margin-bottom:30px;
+}
+div.download-source img{
+    vertical-align:middle;
+}
+
+div#footer{
+    font-size:.8em;
+    margin-top:10px !important;
+}
+div#footer a{
+    color:#999;
+    text-decoration:none;
+}
+div#footer hr{
+    background:url(../images/separator-line.png) top center no-repeat;
+    width:100%;
+    height:3px;
+    margin:12px;
+    
+}
