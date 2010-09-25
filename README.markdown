@@ -14,13 +14,10 @@ issuing the next commands:
     sudo apt-get update
     sudo apt-get upgrade
 
-And if you want all the monochrome icons install the 
-elementary-monochrome and elementary icons set just installing 
-its PPA issuing the next commands:
+If you want all the monochrome icons install elementary-monochrome OR
+my new mabishu-elementary by downloading it from:
 
-    sudo add-apt-repository ppa:elementaryart/elementarydesktop
-    sudo apt-get update
-    sudo apt-get install elementary-icon-theme
+    http://github.com/frandieguez/mabishu-elementary/downloads
 
 And now download the tarball from the Downloads section from
 
