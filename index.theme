@@ -7,6 +7,6 @@ Encoding=UTF-8
 [X-GNOME-Metatheme]
 GtkTheme=Mabishu Revamp
 MetacityTheme=Mabishu Revamp
-IconTheme=elementary-monochrome
+IconTheme=mabishu-elementary
 CursorTheme=default
 ButtonLayout=close,minimize,maximize:
