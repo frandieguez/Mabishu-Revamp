@@ -26,15 +26,15 @@
         
             <ul id="carousel" class="jcarousel-skin-tango">    
                 <li class="section-container">
-                  <a href="screenshots/1.png"><img class="portfolio-image" src="screenshots/1.png" alt="" /></a>
+                  <a href="screenshots/1.png"><img class="portfolio-image" src="screenshots/1-thumb.png" alt="" /></a>
                 </li>
                 
                 <li class="section-container">
-                  <a href="screenshots/2.png"><img class="portfolio-image" src="screenshots/2.png" alt="" /></a>
+                  <a href="screenshots/2.png"><img class="portfolio-image" src="screenshots/2-thumb.png" alt="" /></a>
                 </li>
                 
                 <li class="section-container">
-                  <a href="screenshots/3.png"><img class="portfolio-image" src="screenshots/3.png" alt="" /></a>
+                  <a href="screenshots/3.png"><img class="portfolio-image" src="screenshots/3-thumb.png" alt="" /></a>
                 </li>
                 
                 <!--<li class="section-container">-->
@@ -42,11 +42,11 @@
                 <!--</li>-->
                 
                 <li class="section-container">
-                  <a href="screenshots/5.png"><img class="portfolio-image" src="screenshots/5.png" alt="" /></a>
+                  <a href="screenshots/5.png"><img class="portfolio-image" src="screenshots/5-thumb.png" alt="" /></a>
                 </li>
                 
                 <li class="section-container">
-                  <a href="screenshots/6.png"><img class="portfolio-image" src="screenshots/6.png" alt="" /></a>
+                  <a href="screenshots/6.png"><img class="portfolio-image" src="screenshots/6-thumb.png" alt="" /></a>
                 </li>
                 
             </ul>   
@@ -72,12 +72,12 @@
                 <h2><img src="images/h-install-it.png" alt="Install it!"/></h2>
                 <p>
                     If your're running a GNOME-based desktop is very simple to
-                    install and user it. Just download the two tarballs from below
-                    and drop them into <strong>GNOME Appearance Dialog</strong>.
+                    install and use it. Just download the two packages
+                    from below and double clic onto them to install.
                 </p>
                 <ul id="download-section" class="clearfix">
-                    <li><div><a class="download-button download-gtk-theme" href="http://github.com/frandieguez/Mabishu-Revamp/tree/master" title="Download the Mabishu Revamp GTK+ theme">Download the GTK+ theme</a></div></li>
-                    <li><div><a class="download-button download-icon-theme" href="http://github.com/frandieguez/mabishu-elementary/tree/master" title="Download the Mabishu-elementary Icon Set">Download the Icon theme</a></div></li>
+                    <li><div><a class="download-button download-gtk-theme" href="downloads/mabishu-revamp-theme_0.3-1_all.deb" title="Download the Mabishu Revamp GTK+ theme">Download the GTK+ theme</a></div></li>
+                    <li><div><a class="download-button download-icon-theme" href="downloads/mabishu-elementary-icon-theme_0.1-1_all.deb" title="Download the Mabishu-elementary Icon Set">Download the Icon theme</a></div></li>
                 </ul>
             </div>
             
@@ -90,7 +90,7 @@
         <div id="footer" class="clearfix">
             <hr />
             <div id="copyright" class="clearfix">
-                <a href="http://www.mabishu.com" title="">Mabishu Studio</a> &copy; Creative Commons.
+                <span xmlns:dc="http://purl.org/dc/elements/1.1/" property="dc:title">Mabishu Revamp site</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://frandieguez.github.com/Mabishu-Revamp" property="cc:attributionName" rel="cc:attributionURL">Fran Dieguez Souto</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Recoñecemento 3.0 <br />Unported License</a>. Based on a work at <a xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://github.com/frandieguez/Mabishu-Revamp" rel="dc:source">github.com</a>.
             </div>
         </div>
     </div>
@@ -133,6 +133,7 @@
                 auto:5,
                 wrap: 'circular',
                 animation:"slow",
+                easing: "swing",
                 initCallback: carousel_initCallback,
                 // This tells jCarousel NOT to autobuild prev/next buttons
                 buttonNextHTML: null,
